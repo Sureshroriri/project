@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta property="og:title" content="Page Title">
+        <meta property="og:description" content="Description of the page content">
+        <meta property="og:image" content="https://example.com/image.jpg">
+        <meta property="og:url" content="https://example.com">
+        <meta property="og:type" content="website">
+        <style>
+            /* Styles for the template */
+            p {
+                color: blue;
+            }
+        </style>
+    </head>
+<body>
+    <picture>
+        <source media="(min-width: 768px)" srcset="large-image.jpg">
+        <source media="(min-width: 320px)" srcset="small-image.jpg">
+        <img src="./WhatsApp Image 2024-07-08 at 10.31.08 PM.jpeg" alt="Description">
+    </picture>
+    <form id="myForm">
+        <input type="text" id="username" required>
+        <input type="email" id="email" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div tabindex="0">Focusable Content</div>
+    <img src="./WhatsApp Image 2024-07-08 at 10.31.05 PM.jpeg" data-src="image.jpg" loading="lazy" alt="Description">
+<iframe src="about:blank" data-src="https://youtube.com" loading="lazy"></iframe>
+    <script>
+        const form = document.getElementById('myForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (form.checkValidity()) {
+                // Form is valid, proceed with submission
+                console.log('Form submitted successfully');
+            } else {
+                // Display error messages or handle invalid input
+                console.error('Form validation failed');
+            }
+        });
+    </script>
+    <template id="my-template">
+        
+        <p>Template content</p>
+    </template>
+    
+    <script>
+        // Clone and use the template content
+        const template = document.getElementById('my-template');
+        const clone = document.importNode(template.content, true);
+        document.body.appendChild(clone);
+    </script>
+</body>
+</html>
